@@ -14,10 +14,10 @@ main()
 	{
 		if (c == TAB)
 			printf("\\t");
-		else if (c == BACKSPACE)
-			printf("\\b");
-		else if (c == BACKSLASH || c == DELETE)
+		else if (c == BACKSPACE || c == DELETE)
 			/* Seems this doesn't work because input not read until \n pressed */
+			printf("\\b");
+		else if (c == BACKSLASH)
 			printf("\\\\");
 		else
 			putchar(c);
